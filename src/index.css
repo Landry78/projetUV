@@ -1,0 +1,110 @@
+/* styles.css */
+app
+/* Global styles */
+body {
+  background-image: url('../location.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navbar styles */
+.MuiAppBar-root {
+  background-color: #1976d2; /* Couleur primaire */
+}
+
+.MuiTypography-h6 {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 30px; /* Ajustez cette valeur pour diminuer la taille du logo */
+  margin-right: 8px; /* Espace entre le logo et le texte du site */
+}
+
+/* UserProfile styles */
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.material-icons {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Grid layout styles */
+.MuiGrid-container {
+  margin-top: 20px;
+}
+
+.MuiGrid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+.MuiButton-containedPrimary {
+  background-color: #1976d2;
+  color: #fff;
+  text-transform: none;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: #115293;
+}
+
+/* MenuIcon styles */
+.MuiIconButton-root {
+  color: #000;
+}
+
+.MuiMenu-list {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.MuiMenuItem-root {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #f5f5f5;
+}
+.avatar-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar-upload .MuiAvatar-root {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.avatar-upload .MuiButton-root {
+  margin-top: 10px;
+}

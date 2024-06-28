@@ -1,0 +1,129 @@
+/* src/styles.css */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .Navbar {
+    display: flex;
+    justify-content: space-between;
+ 
+    
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .Navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar-logo img {
+    margin-right: 10px;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px /* Adjust the height as needed */
+  }
+  
+  .Navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  
+  
+  
+ 
+  .Sidebar {
+    text-align: left;
+  }
+  
+  .UserMenu {
+    position: fixed;
+  top: 64px; /* Adjust based on your navbar height */
+  right: 0;
+  }
+  
+  .UserMenu-avatar {
+    margin-right: 10px;
+  }
+  
+  .PublishButton {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .PublishButton:hover {
+    background-color: #303f9f;
+  }
+  .DashboardDrawer {
+    position: fixed;
+    top: 64px; /* Adjust based on your navbar height */
+    left: 0;
+  }
+  /* Styles pour le DashboardDrawer */
+.dashboard-drawer {
+  position: fixed;
+  left: 0;
+  transition: left 0.3s ease-in-out; /* Animation de transition fluide */
+ 
+}
+
+.dashboard-drawer.open {
+  left: 0; /* Affiche le Drawer lorsqu'il est ouvert */
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+.drawer-item {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drawer-item:hover {
+  background-color: #f0f0f0; /* Couleur de fond au survol */
+}
+
+.drawer-item .MuiSvgIcon-root {
+  margin-right: 10px;
+}
+
+.drawer-item-text {
+  font-size: 16px;
+}
+
+.drawer-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.avatar-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar-upload .MuiAvatar-root {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.avatar-upload .MuiButton-root {
+  margin-top: 10px;
+}
