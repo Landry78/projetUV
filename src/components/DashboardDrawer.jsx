@@ -16,7 +16,7 @@ const DashboardDrawer = () => {
   };
 
   return (
-    <div>
+    <div className='DashboardDrawer'>
       <IconButton onClick={toggleDrawer} className={`dashboard-drawer ${open ? 'open' : ''}`}>
         <MenuIcon />
       </IconButton>

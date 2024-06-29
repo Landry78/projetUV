@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OwnerPage from './OwnerPage';
 import PublishPage from './PublishPage';
-import './index.css';
+
 import AdminPage from './AdminPage';
 import Navbar from './components/Navbar';
 

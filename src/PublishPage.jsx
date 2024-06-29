@@ -9,12 +9,9 @@ const PublishPage = () => {
     <div>
       <Navbar />
       <Container>
-        <Box sx={{ mt: 4 }}>
-          <Paper elevation={3} sx={{ p: 4 }}>
-            <Typography variant="h4" sx={{ mb: 2 }}>Publier une offre</Typography>
+       
             <PublishForm />
-          </Paper>
-        </Box>
+         
       </Container>
       <Footer />
     </div>

@@ -5,11 +5,12 @@ import Navbar from './components/Navbar';
 import UserMenu from './components/UserMenu';
 import DashboardDrawer from './components/DashboardDrawer';
 import Footer from './components/Footer.jsx';
-import UserProfileUpload from './components/UserProfileUpload';
+
 import './components/style.css'
 
 const OwnerPage = () => {
   const navigate = useNavigate();
+  const ownerName = 'romeo';
 
   const handlePublishClick = () => {
     navigate('/publish');
@@ -27,9 +28,10 @@ const OwnerPage = () => {
             <Button variant="contained" color="primary" onClick={handlePublishClick}>Publier une offre</Button>
           </Grid>
           <Grid item xs={3}sx={{ textAlign: 'right' }}>
-          <UserProfileUpload />
+          <div className="right-section">
+          <span className="owner-name">{ownerName}</span>
             <UserMenu />
-            
+            </div>
           </Grid>
         </Grid>
       </Container>

@@ -1,44 +1,88 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem, IconButton, Avatar } from '@mui/material';
+import { Menu, MenuItem, IconButton, Avatar, ListItemIcon, Typography, Divider } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DeleteIcon from '@mui/icons-material/Delete';
+import './style.css';
 
 const UserMenu = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [profilePicture, setProfilePicture] = useState(localStorage.getItem('profilePicture') || '');
+  const [imagePreview, setImagePreview] = useState(profilePicture);
 
-  const handleClick = (event) => {
+  const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImagePreview(reader.result);
+        localStorage.setItem('profilePicture', reader.result);
+      };
+      reader.readAsDataURL(file);
+      setProfilePicture(file);
+    }
+  };
+
   return (
-    <div className="UserMenu">
-      <IconButton onClick={handleClick} size="large">
-        <Avatar alt="User Name" src="/user-avatar.png" className="UserMenu-avatar" />
+    <div className='UserMenu'>
+      <IconButton onClick={handleMenuOpen}>
+        <Avatar src={imagePreview} />
         <ArrowDropDownIcon />
       </IconButton>
-      <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-        <MenuItem onClick={handleClose}>
-          <AccountCircleIcon fontSize="small" style={{ marginRight: '8px' }} />
-          Consulter compte
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleMenuClose}
+      >
+        <div className="profile-section">
+          <Avatar src={imagePreview} className="profile-picture" />
+          <input
+            accept="image/*"
+            style={{ display: 'none' }}
+            id="profile-image-upload"
+            type="file"
+            onChange={handleImageChange}
+          />
+          <label htmlFor="profile-image-upload">
+            <IconButton component="span">
+              Modifier<EditIcon />
+            </IconButton>
+          </label>
+        </div>
+        <Divider />
+        <MenuItem onClick={handleMenuClose}>
+          <ListItemIcon>
+            <AccountCircleIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit">Consulter vos informations</Typography>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <EditIcon fontSize="small" style={{ marginRight: '8px' }} />
-          Modifier compte
+        <MenuItem onClick={handleMenuClose}>
+          <ListItemIcon>
+            <EditIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit">Modifier compte</Typography>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <DeleteIcon fontSize="small" style={{ marginRight: '8px' }} />
-          Supprimer compte
+        <MenuItem onClick={handleMenuClose}>
+          <ListItemIcon>
+            <DeleteIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit">Supprimer compte</Typography>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <LogoutIcon fontSize="small" style={{ marginRight: '8px' }} />
-          Se déconnecter
+        <MenuItem onClick={handleMenuClose}>
+          <ListItemIcon>
+            <LogoutIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit">Se déconnecter</Typography>
         </MenuItem>
       </Menu>
     </div>

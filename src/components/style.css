@@ -5,6 +5,13 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url('../../public/location.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
   }
   
   .App {
@@ -16,7 +23,6 @@ body {
     justify-content: space-between;
  
     
-    background-color: #3f51b5;
     color: white;
   }
   
@@ -50,7 +56,7 @@ body {
   }
   
   .UserMenu {
-    position: fixed;
+    position: absolute;
   top: 64px; /* Adjust based on your navbar height */
   right: 0;
   }
@@ -62,15 +68,17 @@ body {
   .PublishButton {
     background-color: #3f51b5;
     color: white;
+  
   }
   
   .PublishButton:hover {
     background-color: #303f9f;
   }
   .DashboardDrawer {
-    position: fixed;
+    position: absolute;
     top: 64px; /* Adjust based on your navbar height */
     left: 0;
+    background-color: white;
   }
   /* Styles pour le DashboardDrawer */
 .dashboard-drawer {
@@ -111,19 +119,33 @@ body {
   top: 10px;
   right: 10px;
 }
-.avatar-upload {
+
+.profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  padding: 16px;
+ 
 }
 
-.avatar-upload .MuiAvatar-root {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
 }
 
-.avatar-upload .MuiButton-root {
-  margin-top: 10px;
+#profile-image-upload {
+  display: none;
+}
+.SUserMenu {
+  position: absolute;
+top: 64px; /* Adjust based on your navbar height */
+right: 0;
+}
+.owner-name {
+  position: absolute;
+  margin-left: 60px;
+  font-size: 1.1em;
+  right: 90px;
+  
 }

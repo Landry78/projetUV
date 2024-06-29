@@ -3,7 +3,9 @@ import { Container, Grid } from '@mui/material';
 import Navbar from './components/Navbar'; // Importez le composant Navbar existant
 import AdminMenu from './components/AdminMenu';
 import SUserMenu from './components/SUserMenu';
-import UserProfileUpload from './components/UserProfileUpload';
+import { FoodBankTwoTone } from '@mui/icons-material';
+import Footer from './components/Footer';
+
 
 const AdminPage = () => {
   return (
@@ -19,9 +21,8 @@ const AdminPage = () => {
           </Grid>
         </Grid>
       </Container>
-      
       <SUserMenu />
-      <UserProfileUpload />
+      <Footer/>
     </div>
   );
 };
