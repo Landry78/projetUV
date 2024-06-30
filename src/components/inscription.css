@@ -1,0 +1,88 @@
+/* Inscription.css */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 1em;
+  }
+  
+  .site-name {
+    font-size: 1.5em;
+  }
+  
+  .navbar-right ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-right ul li {
+    margin-left: 1em;
+  }
+  
+  .navbar-right ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .registration-form div {
+    margin-bottom: 1em;
+  }
+  
+  .registration-form label {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  
+  .registration-form input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .registration-form button {
+    padding: 0.5em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .forgot-password-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 1em;
+    text-align: center;
+    display: block;
+  }
+  
